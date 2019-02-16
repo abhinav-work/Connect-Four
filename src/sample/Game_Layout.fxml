@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="myGrid" style="-fx-background-color: #D9F9F0;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints maxWidth="299.0" minWidth="186.0" prefWidth="196.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="20.0" />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane fx:id="myFirstPane" GridPane.columnSpan="2" />
+        <Pane fx:id="mySecondPane" prefHeight="400.0" prefWidth="200.0" GridPane.rowIndex="1" />
+        <VBox style="-fx-background-color: #003366;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <Region prefHeight="90.0" prefWidth="191.0" VBox.vgrow="SOMETIMES" />
+            <TextField fx:id="textFieldOne" prefHeight="25.0" prefWidth="12.0" promptText="Player One">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="textFieldTwo" promptText="Player Two">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin></TextField>
+            <Button fx:id="setNames" mnemonicParsing="false" prefHeight="25.0" prefWidth="210.0" text="Set Names">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin></Button>
+                <Label fx:id="playerLabel" alignment="CENTER" prefHeight="125.0" prefWidth="196.0" text="Player One" textFill="WHITE">
+                    <font>
+                        <Font size="32.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="304.0" text="Turn" textFill="WHITE">
+                    <font>
+                        <Font size="32.0" />
+                    </font>
+                </Label>
+                <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+    </children>
+</GridPane>
